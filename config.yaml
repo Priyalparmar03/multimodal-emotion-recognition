@@ -1,0 +1,118 @@
+# ==========================================
+# Project Configuration
+# ==========================================
+
+project:
+  name: "Multimodal Emotion Recognition"
+  version: "1.0.0"
+  random_seed: 42
+
+# ==========================================
+# Dataset
+# ==========================================
+
+dataset:
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+
+  labels_file: "labels.csv"
+
+  image_folder: "images"
+
+  image_column: "image_name"
+
+  text_column: "text_corrected"
+
+  target_column: "overall_sentiment"
+
+  image_size: 224
+
+  train_split: 0.70
+  validation_split: 0.15
+  test_split: 0.15
+# ==========================================
+# Text
+# ==========================================
+
+text:
+  pretrained_model: "bert-base-uncased"
+  max_length: 128
+
+# ==========================================
+# Image
+# ==========================================
+
+image:
+  backbone: "resnet18"
+  pretrained: true
+
+# ==========================================
+# Fusion
+# ==========================================
+
+fusion:
+  image_embedding_dim: 512
+  text_embedding_dim: 768
+  hidden_dim: 512
+  dropout: 0.30
+
+# ==========================================
+# Model
+# ==========================================
+
+model:
+  num_classes: 7
+
+# ==========================================
+# Training
+# ==========================================
+
+training:
+  epochs: 20
+  batch_size: 32
+  learning_rate: 0.0001
+  weight_decay: 0.00001
+
+# ==========================================
+# Optimizer
+# ==========================================
+
+optimizer:
+  name: "AdamW"
+
+# ==========================================
+# Scheduler
+# ==========================================
+
+scheduler:
+  name: "ReduceLROnPlateau"
+  patience: 3
+
+# ==========================================
+# Checkpoints
+# ==========================================
+
+checkpoint:
+  directory: "experiments/checkpoints"
+
+# ==========================================
+# Logs
+# ==========================================
+
+logging:
+  directory: "experiments/logs"
+
+# ==========================================
+# RAG
+# ==========================================
+
+rag:
+  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+  faiss_index_path: "rag/faiss_index"
+
+# ==========================================
+# Demo
+# ==========================================
+
+demo:
+  title: "Multimodal Emotion Recognition"

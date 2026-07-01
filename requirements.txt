@@ -1,0 +1,30 @@
+# Deep Learning
+torch
+torchvision
+transformers
+
+# Data
+pandas
+numpy
+scikit-learn
+pillow
+matplotlib
+
+# LangChain + RAG
+langchain
+langchain-community
+langchain-huggingface
+langchain-core
+faiss-cpu
+sentence-transformers
+
+# App
+streamlit
+
+# Testing
+pytest
+
+
+
+# For GPU support, install torch separately first:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118

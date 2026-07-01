@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Notebook
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# PyTest
+.pytest_cache/
+
+# Dataset
+data/raw/
+data/processed/
+
+# Experiments
+experiments/checkpoints/
+experiments/logs/
+
+# RAG Index
+rag/faiss_index/
+
+# Streamlit
+.streamlit/
+
+# Environment
+.env
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Temporary Files
+*.tmp
+*.bak
+
+# Model Weights
+*.pth
+*.pt
+*.ckpt
+
+# Coverage
+.coverage
+htmlcov/
+
+# Misc
+.cache/
