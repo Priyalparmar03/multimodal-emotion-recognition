@@ -19,3 +19,5 @@ docs = [Document(page_content=text) for text in knowledge_base]
 vector_store = FAISS.from_documents(docs, embedding_model)
 vector_store.save_local("rag/knowledge_base/faiss_index")
 print("FAISS index built and saved")
+
+
