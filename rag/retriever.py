@@ -11,7 +11,7 @@ vector_store = FAISS.load_local(
 
 def get_context_for_emotion(predicted_emotion):
     query = f"How to respond to someone feeling {predicted_emotion}"
-    results = vector_store.similarity_search(query, k=2)  # no retriever object at all
+    results = vector_store.similarity_search(query, k=2)  
     return [doc.page_content for doc in results]
 
 def generate_response(predicted_emotion):
